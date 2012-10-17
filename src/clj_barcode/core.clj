@@ -50,6 +50,11 @@
     :jpeg (BarcodeImageHandler/writeJPEG barcode output-stream)
     :png (BarcodeImageHandler/writePNG barcode output-stream)))
 
+(defn barcode-bytes [barcode format]
+  (with-open [out (java.io.ByteArrayOutputStream.)]
+    (output-barcode barcode out format)
+    (.toByteArray out)))
+
 (defn list-image-formats []
   (apply hash-set (BarcodeImageHandler/getImageFormats)))
 
