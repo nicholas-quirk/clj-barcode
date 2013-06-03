@@ -3,9 +3,11 @@
 Clojure wrapper around the Apache Barbecue 1.5 beta library.
 
 ## Why?
+
 This is for smaller businesses that are integrating Clojure into their core base. This wrapper provides a light weight solution to an existing library already in use. The goal was to provide a more idomatic way to generate barcodes in Clojure. Barbecue 1.5 beta was chosen because the last stable release was in 2005. This at least was released in 2007.
 
 ## What?
+
 This wrapper currently only contains the functionality to generate barcode objects and image files (PNG, JPEG, GIF). There are GUI API's for Swing components, but in the interest of keeping this small I've left those out.
 
 ## Usage
